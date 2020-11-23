@@ -1,4 +1,4 @@
-package repository.domain;
+package repository.sql.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

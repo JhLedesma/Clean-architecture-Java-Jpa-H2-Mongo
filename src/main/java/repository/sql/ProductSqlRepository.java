@@ -1,4 +1,4 @@
-package repository;
+package repository.sql;
 
 import core.product.domain.Product;
 

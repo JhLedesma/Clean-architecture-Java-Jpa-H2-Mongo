@@ -1,11 +1,10 @@
-package repository.adapter;
+package repository.sql.adapter;
 
 import core.exception.ResourcesNotFoundException;
 import core.product.domain.Product;
 import org.modelmapper.ModelMapper;
-import org.springframework.web.server.ResponseStatusException;
-import repository.ProductSqlRepository;
-import repository.dao.ProductSqlDao;
+import repository.sql.ProductSqlRepository;
+import repository.sql.dao.ProductSqlDao;
 
 public class ProductSqlAdapter implements ProductSqlRepository {
 
@@ -19,7 +18,7 @@ public class ProductSqlAdapter implements ProductSqlRepository {
 
 	@Override
 	public Product findProduct(String type, String brand) {
-		return productSqlDao.findByProductTypeAndProductEntity(type, brand)
+		return productSqlDao.findByTypeAndBrand(type, brand)
 				.map(productSql ->  modelMapper.map(productSql, Product.class))
 				.orElseThrow(() -> new ResourcesNotFoundException(404, "Product not found"));
 	}

@@ -3,7 +3,7 @@ package core.product.service;
 import client.RiskClient;
 import core.product.domain.Product;
 import core.product.domain.input.ProductIn;
-import repository.ProductSqlRepository;
+import repository.sql.ProductSqlRepository;
 
 public class ProductService {
 
