@@ -15,7 +15,7 @@ public class ContractService {
 	}
 
 	public Contract createContract(Product product, String userId) {
-		final Contract contract = new Contract(UUID.randomUUID().toString(), userId, product);
+		final Contract contract = new Contract(UUID.randomUUID().toString().replace("-", ""), userId, product);
 		return contractDocumentRepository.saveContract(contract);
 	}
 }

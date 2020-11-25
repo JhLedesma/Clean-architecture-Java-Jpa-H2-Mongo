@@ -24,7 +24,7 @@ public class ContractController {
 		this.contractService = contractService;
 	}
 
-	private ContractOutput generateContract(ContractInput request) {
+	public ContractOutput generateContract(ContractInput request) {
 
 		Product product = productService.getProduct(request.getProductId());
 		Contract contract = contractService.createContract(product, request.getUserId());

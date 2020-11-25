@@ -16,7 +16,7 @@ public class ProductService {
 	}
 
 	public Product getProduct(String productId) {
-		final ProductIn productIn = riskClient.getProductIn(productId);
+		final ProductIn productIn = new ProductIn("LOANS", "MANGO"); //riskClient.getProductIn(productId);
 		return productSqlRepository.findProduct(productIn.getType(), productIn.getBrand());
 	}
 }
