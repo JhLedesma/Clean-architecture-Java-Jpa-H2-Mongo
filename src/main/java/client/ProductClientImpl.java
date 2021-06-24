@@ -8,12 +8,12 @@ import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 import util.JsonParser;
 
-public class RiskClient {
+public class ProductClientImpl implements ProductClient {
 
 	private String riskUrl;
 	private RestTemplate restTemplate;
 
-	public RiskClient(String riskUrl, RestTemplate restTemplate) {
+	public ProductClientImpl(String riskUrl, RestTemplate restTemplate) {
 		this.riskUrl = riskUrl;
 		this.restTemplate = restTemplate;
 	}

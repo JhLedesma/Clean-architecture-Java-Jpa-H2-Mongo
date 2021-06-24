@@ -1,6 +1,6 @@
 package application.config;
 
-import client.RiskClient;
+import client.ProductClientImpl;
 import controller.ContractController;
 import core.contract.service.ContractService;
 import core.product.service.ProductService;
@@ -40,8 +40,8 @@ public class ManualConfig {
 		return new ProductSqlAdapter(productSqlDao(), modelMapper());
 	}
 
-	public RiskClient riskClient() {
-		return new RiskClient(riskUrl, restTemplate());
+	public ProductClientImpl riskClient() {
+		return new ProductClientImpl(riskUrl, restTemplate());
 	}
 
 	public ProductService productService() {
